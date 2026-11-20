@@ -1,1 +1,259 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Studio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f3ff;
+            color: #333;
+        }
+
+        /* Task 2: Navigation menu */
+        header {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            color: #7c3aed;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #444;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            background: #eee8ff;
+            color: #7c3aed;
+        }
+
+        .nav-link.active {
+            background: #7c3aed;
+            color: white;
+        }
+
+        /* Welcome section */
+        .hero {
+            text-align: center;
+            padding: 65px 20px;
+            background: linear-gradient(135deg, #7c3aed, #ec4899);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* Task 1: Button system */
+        .buttons-section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .buttons-section h2,
+        .specificity-section h2 {
+            color: #7c3aed;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 13px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #7c3aed;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #eee8ff;
+            color: #7c3aed;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-primary:hover {
+            background: #5b21b6;
+        }
+
+        .btn-secondary:hover {
+            background: #ddd0ff;
+        }
+
+        /* Task 3: CSS Specificity */
+        .specificity-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 35px 25px;
+            background: white;
+            border-radius: 15px;
+        }
+
+        .message {
+            color: #555;
+        }
+
+        .specificity-section .message {
+            color: #7c3aed;
+            font-weight: bold;
+        }
+
+        .note {
+            background: #eee8ff;
+            padding: 18px;
+            border-left: 4px solid #7c3aed;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #312e81;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 8px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Style Studio</div>
+
+        <nav>
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#buttons" class="nav-link">Buttons</a>
+            <a href="#specificity" class="nav-link">CSS Styles</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <h1>Welcome to Style Studio</h1>
+            <p>Learn how CSS selectors make websites look better.</p>
+        </section>
+
+        <!-- Task 1: Buttons -->
+        <section class="buttons-section" id="buttons">
+
+            <h2>Our Button Styles</h2>
+
+            <p>
+                Different button styles can make a website
+                more interesting and easier to use.
+            </p>
+
+            <div class="button-group">
+                <button class="btn btn-primary">
+                    Primary Button
+                </button>
+
+                <button class="btn btn-secondary">
+                    Secondary Button
+                </button>
+
+                <button class="btn btn-primary">
+                    Get Started
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Task 3: Specificity -->
+        <section class="specificity-section" id="specificity">
+
+            <h2>CSS Specificity</h2>
+
+            <p class="message">
+                This text is styled using CSS specificity.
+            </p>
+
+            <div class="note">
+                <h3>What I learned</h3>
+
+                <p>
+                    CSS specificity decides which style
+                    is applied when different selectors
+                    target the same element.
+                </p>
+
+                <p>
+                    A class selector is more specific
+                    than an element selector. More specific
+                    selectors can help avoid using !important.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Style Studio | CSS Homework Project</p>
+    </footer>
+
+</body>
+</html>
+
